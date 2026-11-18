@@ -42,13 +42,14 @@ a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
 .btn.primary:hover{background:var(--amber-hi);border-color:var(--amber-hi)}
 .btn.ghost:hover{background:rgba(248,238,228,.08)}
 
-/* Bokeh: out-of-focus party lights, filled in by script */
+/* Light leaks: warm film-burn glows, filled in by script */
 .bokeh{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.bokeh i{position:absolute;border-radius:50%;aspect-ratio:1;mix-blend-mode:screen;
-  background:radial-gradient(circle,rgba(var(--c),.30) 0 55%,rgba(var(--c),.55) 68%,rgba(var(--c),.18) 72%,rgba(var(--c),0) 75%)}
+.bokeh i{position:absolute;border-radius:50%;mix-blend-mode:screen;filter:blur(var(--b));
+  background:radial-gradient(ellipse at center,rgba(var(--c),.95) 0%,rgba(var(--c),.5) 32%,rgba(var(--c),0) 68%)}
+.bokeh i.streak{border-radius:0;background:linear-gradient(90deg,rgba(var(--c),0),rgba(var(--c),.45) 45%,rgba(255,236,205,.55) 50%,rgba(var(--c),.45) 55%,rgba(var(--c),0))}
 @media (prefers-reduced-motion:no-preference){
   .hero .bokeh i{animation:drift var(--d) ease-in-out infinite alternate}
-  @keyframes drift{to{transform:translate(var(--dx),var(--dy))}}
+  @keyframes drift{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r2))}}
 }
 
 /* Hero: full-bleed viewfinder */
@@ -247,7 +248,7 @@ footer a{color:var(--muted)}
 <body>
 
 <header class="hero" id="top">
-  <div class="bokeh" data-n="30" data-seed="7" data-max="15" data-bias="right"></div>
+  <div class="bokeh" data-n="5" data-seed="7" data-bias="right"></div>
   <div class="wrap" style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;width:100%">
     <nav class="nav" aria-label="Navigation principale">
       <a class="brand" href="#top">By Lely Media</a>
@@ -290,7 +291,7 @@ footer a{color:var(--muted)}
     <article class="svc">
       <div class="visual">
         <div class="screen wide" role="img" aria-label="Aperçu d'un aftermovie en cours de lecture">
-          <div class="bokeh" data-n="18" data-seed="3"></div>
+          <div class="bokeh" data-n="4" data-seed="3"></div>
           <span class="label" style="top:16px;left:18px">Aftermovie</span>
           <span class="label" style="top:16px;right:18px">01:02 / 02:34</span>
           <div class="scrub"></div>
@@ -316,7 +317,7 @@ footer a{color:var(--muted)}
       <div class="visual">
         <div class="phone">
           <div class="screen" role="img" aria-label="Aperçu d'un reel vertical">
-            <div class="bokeh" data-n="18" data-seed="11" data-max="30"></div>
+            <div class="bokeh" data-n="4" data-seed="11"></div>
             <div class="ui">
               <div class="side" aria-hidden="true">
                 <svg class="on" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
@@ -351,7 +352,7 @@ footer a{color:var(--muted)}
     <article class="svc">
       <div class="visual">
         <div class="screen wide letterbox" role="img" aria-label="Aperçu d'un spot publicitaire au format cinéma">
-          <div class="bokeh" data-n="16" data-seed="21"></div>
+          <div class="bokeh" data-n="4" data-seed="21"></div>
           <div class="titlecard"><b>Votre marque</b><small>Spot 30 secondes</small></div>
         </div>
       </div>
@@ -373,7 +374,7 @@ footer a{color:var(--muted)}
       <div class="visual">
         <div class="phone">
           <div class="screen" role="img" aria-label="Aperçu d'une story publiée en direct">
-            <div class="bokeh" data-n="18" data-seed="5" data-max="30"></div>
+            <div class="bokeh" data-n="4" data-seed="5"></div>
             <div class="ui">
               <div class="segs" aria-hidden="true"><b class="f"></b><b class="f"></b><b class="h"></b><b></b><b></b></div>
               <div class="who"><span class="av"></span>votremarque<span class="live">EN DIRECT</span></div>
@@ -401,7 +402,7 @@ footer a{color:var(--muted)}
     <article class="svc">
       <div class="visual">
         <div class="screen wide audit-screen" role="img" aria-label="Aperçu d'un audit de réseaux sociaux">
-          <div class="bokeh" data-n="10" data-seed="9" style="opacity:.6"></div>
+          <div class="bokeh" data-n="4" data-seed="9" style="opacity:.6"></div>
           <div class="audit">
             <div class="bar"><b>Ergonomie</b><span style="--w:72%"></span></div>
             <div class="bar"><b>Image</b><span style="--w:84%"></span></div>
@@ -451,7 +452,7 @@ footer a{color:var(--muted)}
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-t">
-  <div class="bokeh" data-n="22" data-seed="13"></div>
+  <div class="bokeh" data-n="4" data-seed="13"></div>
   <div class="wrap">
     <h2 class="sec-title" id="contact-t">Parlons de votre projet.</h2>
     <div class="contact-grid">
@@ -493,17 +494,19 @@ footer a{color:var(--muted)}
 
 <script>
 (function(){
-  /* Bokeh: seeded so every visit gets the same lights */
-  var cols=['242,154,62','227,169,154','255,214,160','230,112,52'];
+  /* Light leaks: seeded so every visit gets the same glow */
+  var cols=['242,154,62','236,104,40','255,178,80','214,80,48'];
   document.querySelectorAll('.bokeh').forEach(function(box){
-    var n=+box.dataset.n||16,seed=+box.dataset.seed||1,max=+box.dataset.max||22,right=box.dataset.bias==='right';
+    var n=+box.dataset.n||3,seed=+box.dataset.seed||1,right=box.dataset.bias==='right';
     var rnd=function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
-    var html='';
+    var html='',w=box.clientWidth||400,blur=Math.max(14,Math.round(w*0.04));
     for(var i=0;i<n;i++){
-      var size=3+Math.pow(rnd(),1.6)*max, x=right?20+rnd()*84:rnd()*104-4, y=rnd()*104-4, c=cols[Math.floor(rnd()*cols.length)];
-      html+='<i style="--c:'+c+';width:'+size.toFixed(1)+'%;left:'+x.toFixed(1)+'%;top:'+y.toFixed(1)+'%;opacity:'+(.35+rnd()*.6).toFixed(2)+
-        ';--d:'+(14+rnd()*16).toFixed(1)+'s;--dx:'+(rnd()*40-20).toFixed(0)+'px;--dy:'+(rnd()*30-15).toFixed(0)+'px"></i>';
+      var ww=45+rnd()*55,hh=30+rnd()*40,x=(right?35:-15)+rnd()*70,y=-20+rnd()*90,c=cols[Math.floor(rnd()*cols.length)],r=(rnd()*60-30).toFixed(0);
+      html+='<i style="--c:'+c+';--b:'+blur+'px;width:'+ww.toFixed(0)+'%;height:'+hh.toFixed(0)+'%;left:'+x.toFixed(0)+'%;top:'+y.toFixed(0)+'%;opacity:'+(.6+rnd()*.4).toFixed(2)+
+        ';transform:rotate('+r+'deg);--r2:'+(+r+8)+'deg;--d:'+(16+rnd()*14).toFixed(0)+'s;--dx:'+(rnd()*60-30).toFixed(0)+'px;--dy:'+(rnd()*40-20).toFixed(0)+'px"></i>';
     }
+    var sx=(right?55:20)+rnd()*30;
+    html+='<i class="streak" style="--c:242,154,62;--b:'+Math.round(blur*0.6)+'px;width:14%;height:160%;left:'+sx.toFixed(0)+'%;top:-30%;opacity:.7;transform:rotate(18deg);--r2:22deg;--d:24s;--dx:40px;--dy:0px"></i>';
     box.innerHTML=html;
   });
 
