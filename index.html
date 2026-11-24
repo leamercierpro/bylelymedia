@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Sans:wght@400;500;600&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"By Lely Media","description":"Vidéaste d'évènements : captation, aftermovie, interviews, films de marque, community management, audit et stratégie réseaux sociaux.","url":"https://leamercierpro.github.io/bylelymedia/","email":"bylelymedia@gmail.com","founder":{"@type":"Person","name":"Lea Mercier"},"areaServed":[{"@type":"AdministrativeArea","name":"Île-de-France"},{"@type":"AdministrativeArea","name":"Savoie"}],"sameAs":["https://www.instagram.com/bylelymedia/","https://leamercier.journoportfolio.com"],"priceRange":"150 € - 950 €","image":"https://leamercierpro.github.io/bylelymedia/lea.jpg"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"By Lely Media","description":"Vidéaste d'évènements : captation, aftermovie, interviews, films de marque, community management, audit et stratégie réseaux sociaux.","url":"https://leamercierpro.github.io/bylelymedia/","email":"bylelymedia@gmail.com","founder":{"@type":"Person","name":"Lea Mercier"},"areaServed":[{"@type":"AdministrativeArea","name":"Île-de-France"},{"@type":"AdministrativeArea","name":"Savoie"}],"sameAs":["https://www.instagram.com/bylelymedia/","https://www.linkedin.com/in/lea-mercier-18b553318/","https://leamercier.journoportfolio.com"],"priceRange":"150 € - 950 €","image":"https://leamercierpro.github.io/bylelymedia/lea.jpg"}
 </script>
 <style>
 :root{
@@ -266,7 +266,15 @@ input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.85)}
 .channels>div{border-top:1px solid var(--ink);padding-top:12px;min-width:0}
 .channels .k{color:var(--muted);font-size:14px}
 .channels .v{font-size:18px;margin-top:2px;overflow-wrap:anywhere}
-footer{padding:28px 0 calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.social{display:flex;gap:10px;align-items:center}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(248,238,228,.25);color:var(--ink);transition:background .2s,border-color .2s,color .2s}
+.social a:hover{background:var(--amber);border-color:var(--amber);color:var(--on-amber)}
+.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.social svg .fill{fill:currentColor;stroke:none}
+.social.big a{width:52px;height:52px}.social.big svg{width:24px;height:24px}
+.channels>.social{border-top:0;padding-top:0}
+.about-social{margin-top:28px}
+footer{align-items:center;padding:28px 0 calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 
 .dock{display:none}
@@ -502,6 +510,7 @@ footer a{color:var(--muted)}
         <li><b>Presse</b><span>formée en agence, sur le terrain</span></li>
         <li><b>Paris Match, Closer</b><span>médias ayant repris mes images</span></li>
       </ul>
+      <div class="social about-social"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener" aria-label="Instagram de By Lely Media"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg></a><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener" aria-label="LinkedIn de Lea Mercier"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M12 17v-6.5M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/><circle cx="8" cy="7.4" r="1" class="fill"/></svg></a><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o" aria-label="Écrire à bylelymedia@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a></div>
     </div>
   </div>
 </section>
@@ -558,8 +567,10 @@ footer a{color:var(--muted)}
         <p class="status" id="status" role="status"></p>
       </form>
       <div class="channels">
+        <div class="social big"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener" aria-label="Instagram de By Lely Media"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg></a><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener" aria-label="LinkedIn de Lea Mercier"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M12 17v-6.5M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/><circle cx="8" cy="7.4" r="1" class="fill"/></svg></a><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o" aria-label="Écrire à bylelymedia@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a></div>
         <div><div class="k">E-mail</div><div class="v"><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o">bylelymedia@gmail.com</a></div></div>
         <div><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener">@bylelymedia</a></div></div>
+        <div><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener">Lea Mercier</a></div></div>
         <div><div class="k">Portfolio</div><div class="v"><a href="https://leamercier.journoportfolio.com" target="_blank" rel="noopener">leamercier.journoportfolio.com</a></div></div>
         <div><div class="k">Zones</div><div class="v">Île-de-France et Savoie</div></div>
       </div>
@@ -571,7 +582,7 @@ footer a{color:var(--muted)}
 <div class="wrap">
   <footer>
     <span>By Lely Media, Lea Mercier, vidéaste d'évènements</span>
-    <a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener">@bylelymedia</a>
+    <div class="social"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener" aria-label="Instagram de By Lely Media"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg></a><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener" aria-label="LinkedIn de Lea Mercier"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M12 17v-6.5M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/><circle cx="8" cy="7.4" r="1" class="fill"/></svg></a><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o" aria-label="Écrire à bylelymedia@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a></div>
   </footer>
 </div>
 <div class="dock" id="dock"><a class="btn primary" href="#contact">Demander un devis</a></div>
