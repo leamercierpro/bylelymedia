@@ -272,7 +272,10 @@ input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.85)}
 .social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .social svg .fill{fill:currentColor;stroke:none}
 .social.big a{width:52px;height:52px}.social.big svg{width:24px;height:24px}
-.channels>.social{border-top:0;padding-top:0}
+.ch{display:flex;align-items:center;gap:10px}
+.ch-ico{display:inline-flex;flex:none;color:var(--amber)}
+.ch-ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ch-ico svg .fill{fill:currentColor;stroke:none}
 .about-social{margin-top:28px}
 footer{align-items:center;padding:28px 0 calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
@@ -567,10 +570,9 @@ footer a{color:var(--muted)}
         <p class="status" id="status" role="status"></p>
       </form>
       <div class="channels">
-        <div class="social big"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener" aria-label="Instagram de By Lely Media"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg></a><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener" aria-label="LinkedIn de Lea Mercier"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M12 17v-6.5M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/><circle cx="8" cy="7.4" r="1" class="fill"/></svg></a><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o" aria-label="Écrire à bylelymedia@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a></div>
-        <div><div class="k">E-mail</div><div class="v"><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o">bylelymedia@gmail.com</a></div></div>
-        <div><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener">@bylelymedia</a></div></div>
-        <div><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener">Lea Mercier</a></div></div>
+        <div><div class="k">E-mail</div><div class="v ch"><span class="ch-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span><a href="mailto:bylelymedia@gmail.com?subject=Demande%20de%20devis%20vid%C3%A9o">bylelymedia@gmail.com</a></div></div>
+        <div><div class="k">Instagram</div><div class="v ch"><span class="ch-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg></span><a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener">@bylelymedia</a></div></div>
+        <div><div class="k">LinkedIn</div><div class="v ch"><span class="ch-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M12 17v-6.5M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/><circle cx="8" cy="7.4" r="1" class="fill"/></svg></span><a href="https://www.linkedin.com/in/lea-mercier-18b553318/" target="_blank" rel="noopener">Lea Mercier</a></div></div>
         <div><div class="k">Portfolio</div><div class="v"><a href="https://leamercier.journoportfolio.com" target="_blank" rel="noopener">leamercier.journoportfolio.com</a></div></div>
         <div><div class="k">Zones</div><div class="v">Île-de-France et Savoie</div></div>
       </div>
