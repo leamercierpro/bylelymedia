@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>By Lely Media | Vidéaste événementiel en Île-de-France et en Savoie</title>
-<meta name="description" content="Lea Mercier, vidéaste d'évènements en Île-de-France et en Savoie : aftermovies, reels, interviews, vidéos publicitaires et social takeover. Formée en agence de presse.">
+<meta name="description" content="Lea Mercier, vidéaste d'évènements en Île-de-France et en Savoie : aftermovies, interviews, films de marque, community management, audit et stratégie. Formée en agence de presse.">
 <link rel="canonical" href="https://leamercierpro.github.io/bylelymedia/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leamercierpro.github.io/bylelymedia/">
 <meta property="og:title" content="By Lely Media, vidéaste d'évènements">
-<meta property="og:description" content="Aftermovies, reels 9:16, vidéos publicitaires et social takeover. Île-de-France et Savoie.">
+<meta property="og:description" content="Aftermovies, interviews, films de marque et community management. Île-de-France et Savoie.">
 <meta property="og:image" content="https://leamercierpro.github.io/bylelymedia/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Instrument+Sans:wght@400;500;600&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"By Lely Media","description":"Vidéaste d'évènements : captation, aftermovie, reels, vidéo publicitaire, social takeover, audit et stratégie réseaux sociaux.","url":"https://leamercierpro.github.io/bylelymedia/","email":"bylelymedia@gmail.com","founder":{"@type":"Person","name":"Lea Mercier"},"areaServed":[{"@type":"AdministrativeArea","name":"Île-de-France"},{"@type":"AdministrativeArea","name":"Savoie"}],"sameAs":["https://www.instagram.com/bylelymedia/","https://leamercier.journoportfolio.com"],"priceRange":"80 € - 950 €","image":"https://leamercierpro.github.io/bylelymedia/lea.jpg"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"By Lely Media","description":"Vidéaste d'évènements : captation, aftermovie, interviews, films de marque, community management, audit et stratégie réseaux sociaux.","url":"https://leamercierpro.github.io/bylelymedia/","email":"bylelymedia@gmail.com","founder":{"@type":"Person","name":"Lea Mercier"},"areaServed":[{"@type":"AdministrativeArea","name":"Île-de-France"},{"@type":"AdministrativeArea","name":"Savoie"}],"sameAs":["https://www.instagram.com/bylelymedia/","https://leamercier.journoportfolio.com"],"priceRange":"150 € - 950 €","image":"https://leamercierpro.github.io/bylelymedia/lea.jpg"}
 </script>
 <style>
 :root{
@@ -121,6 +121,12 @@ section{padding:96px 0}
 .offer-act .btn{padding:18px 32px;font-size:17px}
 .offer-act .save{margin:0}
 
+/* References */
+.refs{padding:28px 0;border-bottom:1px solid var(--line)}
+.refs-in{display:flex;align-items:baseline;gap:12px 36px;flex-wrap:wrap}
+.refs-k{color:var(--muted);font-size:14px}
+.refs ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 36px;font-family:var(--display);font-size:clamp(20px,2vw,26px)}
+
 /* Services: each one shown, not described */
 .svc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 72px;align-items:center;margin-bottom:120px}
 .svc:last-of-type{margin-bottom:56px}
@@ -163,6 +169,9 @@ summary:hover{color:var(--amber-hi)}
 .scrub::after{content:"";position:absolute;left:38%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--ink)}
 .letterbox::before,.letterbox::after{content:"";position:absolute;left:0;right:0;height:13%;background:#0D0806;z-index:2}
 .letterbox::before{top:0}.letterbox::after{bottom:0}
+.lower{position:absolute;z-index:2;left:6%;bottom:22%;display:flex;flex-direction:column;padding:10px 16px 10px 14px;background:rgba(20,13,10,.72);border-left:3px solid var(--amber)}
+.lower b{font-family:var(--display);font-weight:400;font-size:clamp(20px,2.2vw,28px);line-height:1.1}
+.lower small{font-size:13px;color:var(--rose)}
 .titlecard{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .titlecard b{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1}
 .titlecard small{font-size:13px;color:var(--rose);margin-top:10px;letter-spacing:.04em}
@@ -347,10 +356,17 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<div class="refs">
+  <div class="wrap refs-in">
+    <span class="refs-k">Ils m'ont fait confiance</span>
+    <ul><li>Les Nouveaux Directeurs × Kaspia Réceptions</li><li>Cinemergence</li><li>Bestimage</li></ul>
+  </div>
+</div>
+
 <main>
 <section id="prestations" aria-labelledby="prest-t">
   <div class="wrap">
-    <h2 class="sec-title" id="prest-t">Ce que je filme</h2>
+    <h2 class="sec-title" id="prest-t">Ce que je fais pour vous</h2>
     <p class="sec-intro">Des prix de départ pour vous repérer. Chaque projet reçoit ensuite son devis sur mesure.</p>
 
     <article class="svc">
@@ -363,8 +379,8 @@ footer a{color:var(--muted)}
         </div>
       </div>
       <div>
-        <h3>Évènements</h3>
-        <p class="pitch">Je capte les temps forts, l'ambiance et les visages, et je peux interviewer vos invités. Vous repartez avec un film à partager.</p>
+        <h3>Vidéo d'évènement</h3>
+        <p class="pitch">Je capte les temps forts, l'ambiance et les visages. Vous repartez avec un film à partager.</p>
         <p class="from"><small>à partir de</small><b>450 €</b></p>
         <details>
           <summary>Voir les formules</summary>
@@ -373,69 +389,35 @@ footer a{color:var(--muted)}
             <li><div class="row"><strong>Aftermovie</strong><span class="price">650 €</span></div><span class="d">Un film de 1 à 3 min, monté et mis en musique.</span></li>
             <li><div class="row"><strong>Pack évènement<span class="badge">Le plus demandé</span></strong><span class="price">950 €</span></div><span class="d">L'aftermovie et 3 reels prêts à publier.</span><span class="save">240 € d'économie</span></li>
           </ul>
-          <p class="fine" style="padding-bottom:14px">Interview filmée (dirigeant, chef, artiste) : 150 € de plus. Journée complète (jusqu'à 8 h) : 250 € de plus.</p>
+          <p class="fine" style="padding-bottom:14px">Journée complète (jusqu'à 8 h) : 250 € de plus.</p>
         </details>
       </div>
     </article>
 
     <article class="svc flip">
       <div class="visual">
-        <div class="phone">
-          <div class="screen" role="img" aria-label="Aperçu d'un reel vertical">
-            <div class="bokeh" data-n="4" data-seed="11"></div>
-            <div class="ui">
-              <div class="side" aria-hidden="true">
-                <svg class="on" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5z"/></svg>
-                <svg viewBox="0 0 24 24"><path d="M21 4 3 11l7 3 3 7z"/><path d="m10 14 4-4"/></svg>
-              </div>
-              <div class="cap">
-                <div class="who"><span class="av"></span>@votremarque</div>
-                <p>La soirée de lancement, en 30 secondes.</p>
-                <div class="prog"></div>
-              </div>
-            </div>
-          </div>
+        <div class="screen wide letterbox" role="img" aria-label="Aperçu d'une interview filmée avec son bandeau de nom">
+          <div class="bokeh" data-n="4" data-seed="21"></div>
+          <span class="label" style="top:16%;left:18px;margin-top:10px">Interview</span>
+          <div class="lower"><b>Prénom Nom</b><small>Cheffe, votre maison</small></div>
         </div>
       </div>
       <div>
-        <h3>Réseaux sociaux</h3>
-        <p class="pitch">Des vidéos verticales pensées pour arrêter le pouce, du tournage au montage.</p>
-        <p class="from"><small>à partir de</small><b>180 €</b></p>
+        <h3>Interviews et films de marque</h3>
+        <p class="pitch">Je fais parler ceux qui font votre évènement ou votre marque : dirigeants, chefs, artistes. Et je le transforme en film qui présente vos services.</p>
+        <p class="from"><small>à partir de</small><b>150 €</b></p>
         <details>
           <summary>Voir les formules</summary>
           <ul class="list">
-            <li><div class="row"><strong>Reel</strong><span class="price">180 €</span></div><span class="d">15 à 60 s en 9:16, sous-titres inclus.</span></li>
-            <li><div class="row"><strong>Pack 3 reels</strong><span class="price">480 €</span></div><span class="save">Soit 160 € le reel</span></li>
-            <li><div class="row"><strong>Pack 5 reels</strong><span class="price">750 €</span></div><span class="save">Soit 150 € le reel</span></li>
-            <li><div class="row"><strong>Montage de vos rushs</strong><span class="price">80 €</span></div><span class="d">Vous filmez, je monte.</span></li>
+            <li><div class="row"><strong>Interview pendant un évènement</strong><span class="price">150 €</span></div><span class="d">En option d'une prestation évènement, intégrée au film ou livrée à part.</span></li>
+            <li><div class="row"><strong>Interview seule</strong><span class="price">350 €</span></div><span class="d">Un dirigeant, un chef ou un artiste, monté en 2 à 4 min.</span></li>
+            <li><div class="row"><strong>Film promotionnel</strong><span class="price">750 €</span></div><span class="d">Concept, tournage et montage, livré en 16:9 et en 9:16.</span></li>
           </ul>
         </details>
       </div>
     </article>
 
     <article class="svc">
-      <div class="visual">
-        <div class="screen wide letterbox" role="img" aria-label="Aperçu d'un spot publicitaire au format cinéma">
-          <div class="bokeh" data-n="4" data-seed="21"></div>
-          <div class="titlecard"><b>Votre marque</b><small>Spot 30 secondes</small></div>
-        </div>
-      </div>
-      <div>
-        <h3>Publicité</h3>
-        <p class="pitch">Votre marque, votre lieu ou votre produit, de l'idée à la vidéo finie.</p>
-        <p class="from"><small>à partir de</small><b>450 €</b></p>
-        <details>
-          <summary>Voir les formules</summary>
-          <ul class="list">
-            <li><div class="row"><strong>Vidéo publicitaire</strong><span class="price">450 €</span></div><span class="d">Concept, tournage et montage, livrée en 16:9 et en 9:16.</span></li>
-            <li><div class="row"><strong>Pack 2 vidéos</strong><span class="price">800 €</span></div><span class="d">Tournées le même jour.</span><span class="save">100 € d'économie</span></li>
-          </ul>
-        </details>
-      </div>
-    </article>
-
-    <article class="svc flip">
       <div class="visual">
         <div class="phone">
           <div class="screen" role="img" aria-label="Aperçu d'une story publiée en direct">
@@ -450,21 +432,21 @@ footer a{color:var(--muted)}
         </div>
       </div>
       <div>
-        <h3>Social takeover</h3>
-        <p class="pitch">Je publie en direct sur vos comptes pendant que vous profitez de l'évènement.</p>
+        <h3>Community management</h3>
+        <p class="pitch">Je prends le relais sur vos réseaux, le temps d'un évènement ou d'une mission de quelques mois.</p>
         <p class="from"><small>à partir de</small><b>350 €</b></p>
         <details>
           <summary>Voir les formules</summary>
           <ul class="list">
-            <li><div class="row"><strong>½ journée</strong><span class="price">350 €</span></div><span class="d">Stories et contenus en direct.</span></li>
-            <li><div class="row"><strong>Journée complète</strong><span class="price">550 €</span></div></li>
-            <li><div class="row"><strong>Gestion réseaux</strong><span class="price">390 € / mois</span></div><span class="d">Planning, publication et suivi de vos comptes.</span></li>
+            <li><div class="row"><strong>Social takeover ½ journée</strong><span class="price">350 €</span></div><span class="d">Stories et contenus publiés en direct pendant l'évènement.</span></li>
+            <li><div class="row"><strong>Social takeover journée</strong><span class="price">550 €</span></div></li>
+            <li><div class="row"><strong>Mission de 1 à 3 mois</strong><span class="price">450 € / mois</span></div><span class="d">Ligne éditoriale, création, publication et bilan chaque mois.</span></li>
           </ul>
         </details>
       </div>
     </article>
 
-    <article class="svc">
+    <article class="svc flip">
       <div class="visual">
         <div class="screen wide audit-screen" role="img" aria-label="Aperçu d'un audit de réseaux sociaux">
           <div class="bokeh" data-n="4" data-seed="9" style="opacity:.6"></div>
@@ -478,24 +460,21 @@ footer a{color:var(--muted)}
         </div>
       </div>
       <div>
-        <h3>Audit &amp; stratégie</h3>
+        <h3>Audit et stratégie</h3>
         <p class="pitch">Un regard extérieur sur vos réseaux et votre site, avec un plan d'action concret.</p>
         <p class="from"><small>à partir de</small><b>150 €</b></p>
         <details>
           <summary>Voir les formules</summary>
-          <table class="matrix">
-            <thead><tr><td></td><th scope="col">Audit</th><th scope="col">Stratégie</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Réseaux</th><td>Instagram, TikTok, Facebook<span class="price">150 €</span></td><td>Plan d'action<span class="price">250 €</span></td></tr>
-              <tr><th scope="row">Site</th><td>Ergonomie, image, contenu<span class="price">150 €</span></td><td>Plan d'action<span class="price">250 €</span></td></tr>
-              <tr><th scope="row">Complet</th><td>Site et réseaux<span class="price">250 €</span></td><td>Site et réseaux<span class="price">400 €</span></td></tr>
-            </tbody>
-          </table>
+          <ul class="list">
+            <li><div class="row"><strong>Audit express</strong><span class="price">150 €</span></div><span class="d">Analyse de vos réseaux ou de votre site, rapport et appel de 30 min.</span></li>
+            <li><div class="row"><strong>Audit et plan d'action</strong><span class="price">390 €</span></div><span class="d">L'audit, puis un plan d'action sur 3 mois.</span></li>
+          </ul>
+          <p class="fine" style="padding-bottom:14px">Le prix de l'audit est déduit si vous enchaînez sur une mission de community management.</p>
         </details>
       </div>
     </article>
 
-    <p class="fine">Déplacements inclus en Île-de-France et en Savoie, musiques libres de droits incluses.</p>
+    <p class="fine">Déplacements inclus en Île-de-France et en Savoie, musiques libres de droits incluses. Reels à l'unité et montage de vos rushs : sur devis.</p>
   </div>
 </section>
 
@@ -514,7 +493,8 @@ footer a{color:var(--muted)}
       <h2 class="sec-title" id="about-t">Lea, derrière la caméra</h2>
       <p class="lead">Vidéaste indépendante depuis 2026, j'ai appris le métier sur le terrain, en agence de presse.</p>
       <p>Envoyée sur des évènements très différents, je filmais des images ensuite rachetées par des médias comme Paris Match ou Closer. J'y ai appris à être au bon endroit au bon moment, sans me faire remarquer.</p>
-      <p>En parallèle, je travaille pour les entreprises présentes sur ces évènements. Pendant Art Basel, Kaspia Réception a fait appel aux Nouveaux Directeurs : j'ai réalisé le film de l'évènement, avec en bonus une interview du chef Dominique Julo, pour promouvoir leurs services.</p>
+      <p>En parallèle, je travaille pour les entreprises présentes sur ces évènements. Pour Les Nouveaux Directeurs, j'ai filmé le restaurant éphémère de Kaspia Réceptions à Art Basel, au Grand Palais, avec l'interview du chef Dominique Julo. Aujourd'hui, je gère aussi les réseaux sociaux de Cinemergence, une école de cinéma.</p>
+      <p>Avant la caméra, j'ai passé plusieurs années dans les coulisses : festivals de cinéma à Deauville et à Aix-les-Bains, salons, congrès, mariages. Je sais comment un évènement se vit de l'intérieur.</p>
       <p>Avant-premières, spectacles, festivals : je partage les montages des évènements que je filme sur <a href="https://www.instagram.com/bylelymedia/" target="_blank" rel="noopener">Instagram</a>.</p>
       <ul class="facts">
         <li><b>2026</b><span>vidéaste indépendante</span></li>
@@ -566,9 +546,9 @@ footer a{color:var(--muted)}
           <select id="presta" name="presta" required>
             <option value="">Choisir une prestation</option>
             <option>Captation d'évènement</option><option>Aftermovie</option><option>Pack évènement</option>
-            <option>Reel / vidéo verticale</option><option>Pack de reels</option><option>Montage à partir de rushs</option>
-            <option>Vidéo publicitaire</option><option>Social takeover</option><option>Gestion réseaux</option>
-            <option>Audit ou stratégie</option><option>Je ne sais pas encore</option>
+            <option>Interview</option><option>Film promotionnel</option><option>Social takeover</option>
+            <option>Mission community management</option><option>Audit et stratégie</option>
+            <option>Reels ou montage (sur devis)</option><option>Je ne sais pas encore</option>
           </select><span class="err" id="presta-err"></span></div>
         <div class="f"><label for="date">Date de l'évènement <span class="opt">(facultatif)</span></label><input id="date" name="date" type="date"></div>
         <div class="f full"><label for="lieu">Lieu <span class="opt">(facultatif)</span></label><input id="lieu" name="lieu" placeholder="Paris 11e, Chambéry, Val Thorens…"></div>
